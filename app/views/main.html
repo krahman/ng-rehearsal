@@ -38,9 +38,9 @@
     <div ng-controller="AvangersCtrl">
         <input type="text" ng-model="search.$"></input>
         <table>
-            <tr ng-repeat="actor in avangers.cast | filter:search">
-                <td>{{actor.name}}</td>
-                <td>{{actor.character}}</td>
+            <tr ng-repeat="actor in avangers.cast | filter:search | limitTo:2">
+                <td>{{actor.name | uppercase}}</td>
+                <td>{{actor.character | lowercase}}</td>
             </tr>
         </table>
     </div>
