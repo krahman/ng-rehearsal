@@ -57,4 +57,30 @@ ngRehearsalApp.controller('SecondCtrl', function($scope, Data){
 
 ngRehearsalApp.controller('AvangersCtrl', function($scope, Avangers){
     $scope.avangers = Avangers;
-})
+});
+
+ngRehearsalApp.directive('superman', function(){
+    return {
+        restrict: "E",
+        template: "<div>Here I am to save the day</div>"
+    }
+});
+
+
+ngRehearsalApp.directive('supermanattr', function(){
+    return {
+        restrict: "A",
+        link: function(){
+            console.log("I am working as an attribute");
+        }
+    }
+});
+
+ngRehearsalApp.directive('supermanclass', function(){
+    return {
+        restrict: "C",
+        link: function(){
+            console.log("I am working as a class");
+        }
+    }
+});
