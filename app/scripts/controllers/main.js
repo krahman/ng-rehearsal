@@ -8,6 +8,25 @@ ngRehearsalApp.factory('Data', function(){
     };
 });
 
+ngRehearsalApp.factory('Avangers', function(){
+    var Avangers = {};
+    Avangers.cast = [
+        {
+            name: "Khal",
+            character: "Daddy"
+        },
+        {
+            name: "Ulfah",
+            character: "Mommy"
+        },
+        {
+            name: "Nevda",
+            character: "Daughter"
+        }
+    ];
+    return Avangers;
+});
+
 ngRehearsalApp.filter('reverse', function(){
     return function(text){
         return text.split("").reverse().join("");
@@ -36,3 +55,6 @@ ngRehearsalApp.controller('SecondCtrl', function($scope, Data){
     }
 });
 
+ngRehearsalApp.controller('AvangersCtrl', function($scope, Avangers){
+    $scope.avangers = Avangers;
+})

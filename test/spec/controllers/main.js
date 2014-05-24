@@ -28,7 +28,7 @@ describe('filter', function(){
 
     describe('reverse', function(){
         it('should reverse a string', inject(function(reverseFilter){
-            expect(reverseFilter('ABCR')).toEqual('DCBA');
+            expect(reverseFilter('ABCD')).toEqual('DCBA');
         }));
     });
 });
