@@ -8,6 +8,11 @@ ngRehearsalApp.factory('Data', function(){
     };
 });
 
+ngRehearsalApp.filter('reverse', function(){
+    return function(text){
+        return text.split("").reverse().join("");
+    }
+})
 
 ngRehearsalApp.controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
@@ -25,6 +30,7 @@ ngRehearsalApp.controller('FirstCtrl', function($scope, Data){
 ngRehearsalApp.controller('SecondCtrl', function($scope, Data){
     $scope.data = Data;
 
+    // this function below can be replaced by reverse filter
     $scope.reversedMessage = function(message){
         return message.split("").reverse().join("");
     }
