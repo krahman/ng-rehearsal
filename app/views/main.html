@@ -37,15 +37,14 @@
 
 <div class="jumbotron">
     <div ng-controller="AvangersCtrl">
-        <input type="text" ng-model="search.$"></input>
+        <input type="text" ng-model="searchText"></input>
         <table>
-            <tr ng-repeat="actor in avangers.cast | filter:search | limitTo:2">
+            <tr ng-repeat="actor in avangers | filter:searchText">
                 <td>{{actor.name | uppercase}}</td>
                 <td>{{actor.character | lowercase}}</td>
             </tr>
         </table>
     </div>
-
 </div>
 
 <div class="jumbotron">
