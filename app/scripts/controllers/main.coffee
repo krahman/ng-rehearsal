@@ -7,3 +7,6 @@ angular.module('ngRehearsalApp')
       'AngularJS'
       'Karma'
     ]
+
+  .controller 'FirstCtrl', ($scope, Data) ->
+    $scope.data = Data
